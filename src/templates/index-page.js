@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
+import VideoFeed from '../components/VideoFeed'
 
 export const IndexPageTemplate = ({
   image,
@@ -38,8 +39,7 @@ export const IndexPageTemplate = ({
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
-            boxShadow:
-              '#6494ED 0.5rem 0px 0px, #6494ED -0.5rem 0px 0px',
+            boxShadow: '#6494ED 0.5rem 0px 0px, #6494ED -0.5rem 0px 0px',
             backgroundColor: '#6494ED',
             color: 'white',
             lineHeight: '1',
@@ -51,8 +51,7 @@ export const IndexPageTemplate = ({
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
-            boxShadow:
-              '#6494ED 0.5rem 0px 0px, #6494ED -0.5rem 0px 0px',
+            boxShadow: '#6494ED 0.5rem 0px 0px, #6494ED -0.5rem 0px 0px',
             backgroundColor: '#6494ED',
             color: 'white',
             lineHeight: '1',
@@ -83,6 +82,22 @@ export const IndexPageTemplate = ({
                       {heading}
                     </h3>
                     <p>{description}</p>
+                  </div>
+                </div>
+                <div className="column is-12">
+                  <h3 className="has-text-weight-semibold is-size-2">
+                    Latest Videos
+                  </h3>
+                  <VideoFeed />
+                  <div className="column is-12 has-text-centered">
+                    <a
+                      className="btn"
+                      href="https://rumble.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Watch more
+                    </a>
                   </div>
                 </div>
                 <div className="column is-12">

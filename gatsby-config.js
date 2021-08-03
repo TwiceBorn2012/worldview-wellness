@@ -28,6 +28,20 @@ module.exports = {
         name: 'images',
       },
     },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `https://rumble.com/rss.php`,
+        name: `Rumble`,
+        // Optional
+        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+        parserOption: {
+          customFields: {
+            item: ['media:content', 'media:thumbnail'],
+          },
+        },
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
